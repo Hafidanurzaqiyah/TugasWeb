@@ -29,6 +29,11 @@ ul li.active a{
 	max-width: 1200px;
 	margin: auto;
 }
+.main h1{
+	color: white;
+	font-size: 20px;
+	text-decoration: underline;
+}
 .title{
 	position: absolute;
 	top: 50%;
@@ -40,45 +45,35 @@ ul li.active a{
 	font-size: 80px;
 	text-decoration: underline;
 }
-.button {
+.shop {
 	position: absolute;
-	top: 25px;
+	top: 7%;
 	left: 8%;
 	color: white;
 	transform: translate(-50%,-50%);
 	font-weight:bold;
-}
-.btn{
-	border: 1px solid white;
-	padding: 10px 20px;
-	color: white;
-	text-decoration: none;
-}
-.btn:hover{
-	background-color: white;
-	color: black;
-	background: white;
+	font-size: 15px;
 }
 .header {
-	margin-bottom: : 20px;
-	background: #917d5c;
-	height: 50px;
+	margin-top: 20px;
+	background: white;
+	height: 	2px;
 }
 .logo{
 	float: left;
 }
 .logo h1{
 	color: white;
-	margin: 10px;
-	margin-top: 5px; 
-	font-size: 30px;
+	margin: 30px;
+	margin-top: 40px; 
+	font-size: 10px;
 }
 .gambar{
 	width: 90%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	margin: auto;
-	margin-top: 20px;
+	margin-top: 100px;
 
 }
 .gambar .foto img{
@@ -104,8 +99,9 @@ ul li.active a{
 }
 .footer{
 	text-align: center;
+	color: white;
 }
 .footer a{
 	text-decoration: none;
-	color: black;
+	color: white;
 }
