@@ -1,0 +1,111 @@
+*{
+	margin:0px;
+	padding:0px;
+	font-family:century gothic;
+}
+ul{
+	list-style: none;
+	float: right;
+	margin-top: 15px;
+}
+ul li{
+	display: inline-block;
+}
+ul li a{
+	text-decoration: none; 
+	color: white;
+	padding: 5px 20px;
+	border: 1px solid transparent;
+}
+ul li a:hover{
+	background-color: white;
+	color: black;
+}
+ul li.active a{
+	background-color: black;
+	color: white;
+}
+.main{
+	max-width: 1200px;
+	margin: auto;
+}
+.title{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.title h1{
+	color: white;
+	font-size: 80px;
+	text-decoration: underline;
+}
+.button {
+	position: absolute;
+	top: 25px;
+	left: 8%;
+	color: white;
+	transform: translate(-50%,-50%);
+	font-weight:bold;
+}
+.btn{
+	border: 1px solid white;
+	padding: 10px 20px;
+	color: white;
+	text-decoration: none;
+}
+.btn:hover{
+	background-color: white;
+	color: black;
+	background: white;
+}
+.header {
+	margin-bottom: : 20px;
+	background: #917d5c;
+	height: 50px;
+}
+.logo{
+	float: left;
+}
+.logo h1{
+	color: white;
+	margin: 10px;
+	margin-top: 5px; 
+	font-size: 30px;
+}
+.gambar{
+	width: 90%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin: auto;
+	margin-top: 20px;
+
+}
+.gambar .foto img{
+	width: 300px;
+}
+.foto {
+	border: 1px solid black;
+	margin: 10px;
+	text-align: center;
+	background: white;
+}
+.foto a{
+	border: 1px solid black;
+	padding: 10px;
+	color: white;
+	background: #917d5c;
+	text-decoration: none;
+	border-radius: 20px;
+	cursor: pointer;
+}
+.foto p{
+	margin-bottom: 15px;
+}
+.footer{
+	text-align: center;
+}
+.footer a{
+	text-decoration: none;
+	color: black;
+}
