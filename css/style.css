@@ -29,11 +29,6 @@ ul li.active a{
 	max-width: 1200px;
 	margin: auto;
 }
-.main h1{
-	color: white;
-	font-size: 20px;
-	text-decoration: underline;
-}
 .title{
 	position: absolute;
 	top: 50%;
@@ -48,25 +43,16 @@ ul li.active a{
 .shop {
 	position: absolute;
 	top: 7%;
-	left: 8%;
+	left: 11%;
 	color: white;
 	transform: translate(-50%,-50%);
 	font-weight:bold;
-	font-size: 15px;
+	font-size: 10px;
 }
 .header {
 	margin-top: 20px;
 	background: white;
 	height: 	2px;
-}
-.logo{
-	float: left;
-}
-.logo h1{
-	color: white;
-	margin: 30px;
-	margin-top: 40px; 
-	font-size: 10px;
 }
 .gambar{
 	width: 90%;
@@ -96,6 +82,69 @@ ul li.active a{
 }
 .foto p{
 	margin-bottom: 15px;
+} 
+.contact
+{
+	position: relative;
+	margin-top: 60px;
+	padding: 30px 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.contact .content{
+	max-width: 800px;
+	text-align: center;
+}
+.contact .content h2{
+	font-size: 36px;
+	font-weight: 500;
+	color: white;
+}
+.contact .content p{
+	font-weight: 300;
+	color: white;
+}
+.container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.container .contactinfo{
+	width:  50%;
+	display: flex;
+	flex-direction: column;
+}
+.container .contactinfo .box{
+	position: relative;
+	padding: 10px 0px;
+	display: flex;
+}
+.container .contactinfo .box .icon{
+	min-width: 60px;
+	height: 60px;
+	background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	font-size: 22px;
+}
+.container .contactinfo .box .text{
+	display: flex;
+	margin-left: 20px;
+	font-size: 16px;
+	color: white;
+	flex-direction: column;
+	font-weight: 300;
+}
+.container .contactinfo .box h3{
+	font-weight: 500;
+	color: #00E5FF;
 }
 .footer{
 	text-align: center;
