@@ -1,30 +1,86 @@
 *{
-	margin:0px;
-	padding:0px;
+	margin: 0;
+	padding: 0;
 	font-family:century gothic;
 }
+
+div{
+	background: black;
+	height: 70px;
+	width: 100%;
+}
+.name{
+	color: white;
+	font-size: 35px;
+	line-height: 65px;
+	padding: 0 100px;
+}
+
 ul{
 	list-style: none;
 	float: right;
-	margin-top: 15px;
+	margin-top: 25px;
+	margin-right: 100px;
 }
+
 ul li{
 	display: inline-block;
 }
 ul li a{
 	text-decoration: none; 
 	color: white;
-	padding: 5px 20px;
-	border: 1px solid transparent;
+	margin-right: 40px;
 }
-ul li a:hover{
-	background-color: white;
-	color: black;
+
+ul img{
+	margin-right: 30px;
+	float: right;
+	margin-top: -5px;
 }
-ul li.active a{
-	background-color: black;
+
+a.active,a:hover{
+	text-decoration: underline;
+	transition: .5s;
+}
+
+.banner-text{
+	position: absolute;
+	font-size: 40px;
+	top: 50%;
+	text-align: center;
+	left: 25%;
+	color: #fff;
+}
+
+.Sneakers{
+	margin: 5px;
+	border: 1px solid #ccc;
+	float: left;
+	width: 300px;
+}
+
+.Sneakers img{
+	width: 60%;
+	height: auto;
+}
+
+.desc{
+	padding: 15px;
+	text-align: center;
+}
+
+.Sneakers a{
+	border: 1px solid black;
+	padding: 10px;
 	color: white;
+	background: #917d5c;
+	text-decoration: none;
+	border-radius: 20px;
+	cursor: pointer;
 }
+.Sneakers p{
+	margin-bottom: 15px;
+} 
 .main{
 	max-width: 1200px;
 	margin: auto;
@@ -41,13 +97,10 @@ ul li.active a{
 	text-decoration: underline;
 }
 .shop {
-	position: absolute;
-	top: 7%;
-	left: 11%;
 	color: white;
-	transform: translate(-50%,-50%);
-	font-weight:bold;
-	font-size: 10px;
+	font-size: 15px;
+	line-height: 65px;
+	padding: 0 100px;
 }
 .header {
 	margin-top: 20px;
@@ -83,10 +136,11 @@ ul li.active a{
 .foto p{
 	margin-bottom: 15px;
 } 
+
 .contact
 {
 	position: relative;
-	margin-top: 60px;
+	margin-top: 10px;
 	padding: 30px 80px;
 	display: flex;
 	justify-content: center;
@@ -146,6 +200,7 @@ ul li.active a{
 	font-weight: 500;
 	color: #00E5FF;
 }
+
 .footer{
 	text-align: center;
 	color: white;
