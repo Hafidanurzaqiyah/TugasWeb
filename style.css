@@ -20,7 +20,7 @@
 
 .navbar-brand {
 	color: white;
-	font-size: 35px;
+	font-size: 25px;
     margin: 5px 0px;
 }
 
@@ -47,7 +47,6 @@
 
 .card{
 	margin-top: 100px;
-
 }
 .card p{
 
@@ -118,13 +117,227 @@
 }
 
 
-.footer{
+.footer {
+    background-color: black;
+    padding: -80px;
+    border-bottom: solid 1px #b0b0b0;
+}
+.footer-details h1 {
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 600;
 
+}
+
+.footer-details h4 {
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 400;
+    padding: 0px 0px;
+}
+
+.company ul {
+    list-style: none;
+    margin-left: 50px;
+}
+
+.company a {
+    text-decoration: none;
+    color: #b0b0b0;
+    font-size: 15px;
+}
+
+.company a:hover {
+    color: #0a9a78;
+    text-decoration: underline;
+}
+
+.footer-details p {
+    color: #b0b0b0;
+    font-size: 15px;
+}
+
+.footer-details .form-email {
+    height: 45px;
+    border-radius: 0px;
+    font-size: 15px;
+    padding: 20px 12px;
+}
+
+.btn-sub {
+    width: 30%;
+    height: 45px;
+    background-color: #0a9a78 !important;
+    border-color: transparent !important;
+    color: #fff !important;
+    border-radius: 0;
+    font-size: 15px;
+    transition: all ease-in-out 0.6s;
+}
+
+.btn-sub:hover {
+    background-color: transparent !important;
+    border-color: #fff !important;
+    color: #fff !important;
+}
+
+.follow-us i {
+    font-size: 18px;
+    color: #b0b0b0;
+    margin-right: 25px;
+}
+
+.follow-us i:hover {
+    color: white;
+}
+
+.copyright{
 	text-align: center;
 	color: white;
-}
-.footer a{
-	text-decoration: none;
-	color: white;
+	margin-left: 50px;
 }
 
+/*<!account>*/
+
+
+.wrapper {	
+  margin-top: 150px;
+  margin-bottom: 80px;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  border-right: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+  border-left: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 3rem 5rem -2rem rgba(0, 0, 0, 0.2);
+}
+
+.form-control {
+  font-size: 16px;
+  padding: 10px;
+  box-sizing: border-box;
+  height: auto;
+  border-radius: 1px;
+}
+/* enable absolute positioning */
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .fa {
+  position: absolute;
+  top: 32px;
+  padding: 12px 20px 14px 20px;
+  background-color: rgba(0,0,0,0.05);
+  pointer-events: none;
+  border-right: 1px solid rgba(0,0,0,0.1);
+}
+
+/* align icon */
+.left-addon .fa  { left:  0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  65px; }
+
+.form-signin input {
+  margin-bottom:15px;
+  height:44px;
+}
+
+.form-signin .forgot-password {
+  display: block;
+  padding-top:2px;
+  padding-bottom:2px;
+  margin-top:-8px;
+  margin-bottom:30px;
+  font-size:15px;
+}
+
+.account-signup {
+  max-width: 380px;
+  padding: 15px 35px;
+  margin: 0 auto;
+  background-color: rgba(0,0,0,0.1);
+}
+
+/*<Register>*/
+
+.signup-form{
+	width: 400px;
+	margin: 0 auto;
+	margin-top: 60px;
+	padding: 40px 0;
+}
+.signup-form h2{
+	color: #636363;
+    margin: 0 0 15px;
+	position: relative;
+	text-align: center;
+}
+.signup-form h2:before, .signup-form h2:after{
+	content: "";
+	height: 2px;
+	width: 30%;
+	background: #d4d4d4;
+	position: absolute;
+	top: 50%;
+	z-index: 2;
+}	
+.signup-form h2:before{
+	left: 0;
+}
+.signup-form h2:after{
+	right: 0;
+}
+.signup-form .hint-text{
+	color: #999;
+	margin-bottom: 50px;
+	text-align: center;
+}
+.signup-form form{
+	color: #999;
+	border-radius: 3px;
+	margin-bottom: 20px;
+    background: #f2f3f7;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+.signup-form .form-group{
+	margin-bottom: 20px;
+}
+.signup-form input[type="checkbox"]{
+	margin-top: 3px;
+}
+.signup-form .btn{        
+    font-size: 16px;
+    font-weight: bold;		
+	min-width: 140px;
+    outline: none !important;
+    background-color: #3498db;
+}
+.signup-form .row div:first-child{
+	padding-right: 10px;
+}
+.signup-form .row div:last-child{
+	padding-left: 10px;
+}    	
+.signup-form a{
+	color: #fff;
+	text-decoration: underline;
+}
+.signup-form a:hover{
+	text-decoration: none;
+}
+.signup-form form a{
+	color: #3498db;
+	text-decoration: none;
+}	
+.signup-form form a:hover{
+	text-decoration: underline;
+}  
