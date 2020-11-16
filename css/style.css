@@ -9,34 +9,20 @@
 
 
 /* Navbar */
-
 .navbar {
     background-color: black;
     font-size: 20px;
     padding: 0px 2px;
     text-transform: capitalize;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-.navbar-brand {
-	color: white;
-	font-size: 25px;
-    margin: 5px 0px;
+.navbar-brand{
+  font-size: 25px;
 }
-
-.navbar-nav .nav-item {
-    margin: 0px 10px;
-}
-
-.nav-link {
-    color: white;
-    font-weight: 500;
-}
-
 .nav-link:hover {
-    color: #0a9a78;
     text-decoration: underline;
-    font-weight: 500;
 }
 
 /* Slider */
