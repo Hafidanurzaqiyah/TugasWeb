@@ -19,7 +19,12 @@
 }
 
 .navbar-brand{
-  font-size: 25px;
+  font-size: 30px;
+}
+
+.collapse li{
+  padding: 0px 10px;
+  margin-right: 10px;
 }
 .nav-link:hover {
     text-decoration: underline;
@@ -27,15 +32,15 @@
 
 /* Slider */
 
-.slider-menu .carousel-inner .carousel-item img {
+.swiper-slide .carousel-inner .carousel-item img {
     height: 625px;
 }
-
+/*product*/
 .card{
 	margin-top: 100px;
 }
-.card p{
 
+.card p{
 	margin-top: -10px;
 	margin-bottom: 1px;
 }
@@ -226,10 +231,14 @@
 }
 
 /* align icon */
-.left-addon .fa  { left:  0px;}
+.left-addon .fa  { 
+  left:  0px;
+}
 
 /* add padding  */
-.left-addon input  { padding-left:  65px; }
+.left-addon input  { 
+  padding-left:  65px; 
+}
 
 .form-signin input {
   margin-bottom:15px;
@@ -262,7 +271,7 @@
 }
 .signup-form h2{
 	color: #636363;
-    margin: 0 0 15px;
+  margin: 0 0 15px;
 	position: relative;
 	text-align: center;
 }
@@ -290,9 +299,9 @@
 	color: #999;
 	border-radius: 3px;
 	margin-bottom: 20px;
-    background: #f2f3f7;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    padding: 30px;
+  background: #f2f3f7;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  padding: 30px;
 }
 .signup-form .form-group{
 	margin-bottom: 20px;
@@ -303,7 +312,7 @@
 .signup-form .btn{        
     font-size: 16px;
     font-weight: bold;		
-	min-width: 140px;
+	  min-width: 140px;
     outline: none !important;
     background-color: #3498db;
 }
