@@ -1,8 +1,4 @@
-<?php 
-session_start();
-//koneksi ke database
-include 'koneksi.php';
- ?>
+<?php include 'koneksi.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,49 +17,63 @@ include 'koneksi.php';
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <section class="slider-menu">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="./img/1.jpg" alt="First slide">
-                <div class="carousel-caption text-left">
-                    <h1>Welcome to ShoesStyle</h1>
-                    <h2>we hope you enjoy</h2>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="./img/2.jpg" alt="Second slide">
-                <div class="carousel-caption text-left">
-                    <h1>Welcome to ShoesStyle</h1>
-                    <h2>we hope you enjoy</h2>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="./img/3.jpg" alt="Third slide">
-                <div class="carousel-caption text-left">
-                    <h1>Welcome to ShoesStyle</h1>
-                    <h2>we hope you enjoy</h2>
-                </div>
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+
+
+ <?php include 'menu.php'; ?>
+
+ <!--Register-->
+ <div class="signup-form">
+    <form  method="post">
+        <h2>Registrasi Account</h2>
+        <div class="form-group">
+          <input type="text" class="form-control" name="nama" placeholder="Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" name="email" placeholder="Email" required>
     </div>
-</section>
+    <div class="form-group">
+        <input type="password" class="form-control" name="password" placeholder="Password" required>
+    </div>
+    <div class="form-group">
+       <textarea class="form-control" name="alamat" placeholder="Alamat" required></textarea>
+   </div>
+   <div class="form-group">
+    <input type="text" class="form-control" name="telepon" placeholder="Nomor Handphone" required>
+</div>        
+<div class="form-group">
+    <button class="btn btn-success btn-lg btn-block" name="daftar">Register Now</button>
+</div>
+<div class="text-center">Already have an account? <a href="account.html">Sign in</a>
+</form>
 
-<?php include 'menu.php'; ?>
+<?php  
+if (isset($_POST["daftar"])) 
+{
+    $nama = $_POST["nama"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    $alamat = $_POST["alamat"];
+    $telepon = $_POST["telepon"];
 
+    $ambil = $koneksi->query("SELECT * FROM pelanggan WHERE email_pelanggan='$email'");
+    $yangcocok = $ambil->num_rows;
+    if ($yangcocok==1) 
+    {
+       echo "<script>alert('Pendaftaran gagal, email sudah digunakan!');</script>";
+       echo "<script>location='register.php';</script>";
+   }
+   else
+   {
+    $koneksi->query("INSERT INTO pelanggan (email_pelanggan,password_pelanggan,nama_pelanggan,telepon_pelanggan,alamat_pelanggan) VALUES ('$email','$password','$nama','$telepon','$alamat')");
+
+    echo "<script>alert('Pendaftaran sukses, silahkan login!');</script>";
+    echo "<script>location='login.php';</script>";
+}
+}
+
+?>
+</div>
+</div>
 <!-- Footer -->
 <div class="footer">
     <div class="container ">
@@ -93,12 +103,22 @@ include 'koneksi.php';
                     </li>
                 </ul>
             </div>
+            <div class="col-lg-4  py-3 sub">
+                <form action="">
+                    <div class="form-group">
+                        <h4>Alamat email</h4>
+                        <input name="" class="form-control form-email shadow-none"
+                        placeholder="Enter Your Email Address" type="email">
+                    </div>
+                    <button type="submit" class="btn btn-sub">Subscribe</button>
+                </form>
+            </div>
             <div class="col-lg-4 py-5 follow-us">
                 <h4>Follow us</h4>
-                <i class="fab fa-facebook" aria-hidden="true"></i>
-                <i class="fab fa-youtube" aria-hidden="true"></i>
-                <i class="fab fa-twitter" aria-hidden="true"></i>
-                <i class="fab fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
             </div>
         </div>
         <div class="copyright">
@@ -107,9 +127,9 @@ include 'koneksi.php';
   </div>
 </div>
 </div>
+</div>
+
 </header>
-
-
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

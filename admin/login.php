@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$koneksi = new mysqli("localhost","root","","shoesstyle");
+$koneksi = new mysqli("localhost","root","","ShoesStyle");
  
 ?>  
 ﻿<!DOCTYPE html>
@@ -24,7 +24,7 @@ $koneksi = new mysqli("localhost","root","","shoesstyle");
         <div class="row text-center ">
             <div class="col-md-12">
                 <br /><br />
-                <h2> Shooesstyle : Login</h2>
+                <h2> ShooesStyle : Login</h2>
                
                 <h5>( Login yourself to get access )</h5>
                  <br />

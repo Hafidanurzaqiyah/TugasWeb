@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$koneksi = new mysqli("localhost","root","","shoesstyle");
+include 'koneksi.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,41 +21,8 @@ $koneksi = new mysqli("localhost","root","","shoesstyle");
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container ">
-      <a class="navbar-brand text-white font-weight-bold" href="#">ShoesStyle</a>
-      <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto mr-4 text-white">
-          <li class="nav-item active">
-            <a class="nav-link text-white" href="index.php">Home <span class="sr-only">(current)</span></a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link text-white" href="produk.php">Produk</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="contact.php" tabindex="-1" aria-disabled="true">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="chekout.php">Chekout</a>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <?php if (isset($_SESSION["pelanggan"])): ?>
-             <li><a href="logout.php" class="btn"><img src="img/logout.png" width="30" data-toggel="tooltip" title="Logout"></a></li>
-          <?php else: ?>
-            <li><a href="login.php" class="btn"><img src="img/account.png" width="30" data-toggel="tooltip" title="Login"></a></li>
-          <?php endif ?>
-          
-         <li><a href="keranjang.php" class="btn"><img src="img/keranjang.png" width="30" data-toggel="tooltip" title="Keranjang"></a></li>
-       </ul>
-     </div>
-   </div>
- </nav>
+  
+  <?php include 'menu.php'; ?>
     <!---Account-->
     <div class="wrapper">
       <form class="form-signin" method="post">
@@ -74,7 +41,7 @@ $koneksi = new mysqli("localhost","root","","shoesstyle");
        <a class="forgot-password" href="#">I forgot my password</a>   
        <button class="btn btn-lg btn-primary btn-block" name="simpan">Login</button>
      </form>
-     <p class="account-signup">Don't have an account? <a href="Register.html">Sign up here</a>
+     <p class="account-signup">Don't have an account? <a href="register.php">Sign up here</a>
      </div>
 
 
@@ -94,14 +61,13 @@ $koneksi = new mysqli("localhost","root","","shoesstyle");
         $_SESSION["pelanggan"]= $akun;
         echo "<script>alert('anda berhasil login');</script>";
 
-        if (empty($_SESSION["keranjang"]) OR !isset($_SESSION["keranjang"])) 
+        if (isset($_SESSION["keranjang"]) OR !empty($_SESSION["keranjang"])) 
         {
-          echo "<script>alert('keranjang kosong, silahkan berbelanja');</script>";
-          echo "<script>location='produk.php';</script>";
+          echo "<script>location='checkout.php';</script>";
         }
         else
         {
-          echo "<script>location='chekout.php';</script>";
+          echo "<script>location='produk.php';</script>";
         }
         
       }

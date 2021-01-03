@@ -26,4 +26,4 @@
 		<?php $nomor++; ?>
 	<?php } ?>
 	</tbody>
-</table>
+</table> 

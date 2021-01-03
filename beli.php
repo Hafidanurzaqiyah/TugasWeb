@@ -4,7 +4,7 @@ session_start();
 $id_produk = $_GET['id'];
 
 
-// jk sudah ada prouk itu dikernajng , maka produk itujumlahnya di+1
+// jika sudah ada produk itu dikeranjang , maka produk itu jumlahnya di+1
 if (isset($_SESSION['keranjang'][$id_produk])) 
 {
 	$_SESSION['keranjang'][$id_produk]+=1;

@@ -1,7 +1,7 @@
 ﻿<?php 
 session_start();
 //koneksi ke database
-$koneksi =new mysqli("localhost","root","","shoesstyle");
+$koneksi =new mysqli("localhost","root","","ShoesStyle");
 if (!isset($_SESSION['admin'])) 
 {
   echo "<script>alert('Anda harus login');</script>";
@@ -44,15 +44,15 @@ padding: 15px 50px 5px 50px;
 float: right;
 font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
         </nav>   
-           <!-- /. NAV TOP  -->
+<!-- /. NAV TOP  -->
                 <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-				<li class="text-center">
+                <li class="text-center">
                     <img src="assets/img/find_user.png" class="user-image img-responsive"/>
-					</li>
-				
-					
+                    </li>
+                
+                    
                     <li>
                         <a href="index.php"><i class="fa fa-dashboard fa-3x"></i> Home</a>
                     </li>
@@ -77,7 +77,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
-              <?php 
+            <?php 
               if (isset($_GET['halaman'])) {
                 if ($_GET['halaman']=="produk") 
                 {
