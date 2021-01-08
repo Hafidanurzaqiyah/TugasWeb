@@ -5,8 +5,8 @@ include 'koneksi.php';
 
 if (!isset($_SESSION["pelanggan"])) 
 {
-	echo "<script>alert('silahkan login');</script>";
-	echo "<script>location='login.php';</script>";
+  echo "<script>alert('silahkan login');</script>";
+  echo "<script>location='login.php';</script>";
 }
 if (empty($_SESSION["keranjang"]) OR !isset($_SESSION["keranjang"])) 
 {
@@ -18,13 +18,13 @@ if (empty($_SESSION["keranjang"]) OR !isset($_SESSION["keranjang"]))
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ShoesStyle</title>
+  <title>ShoesStyle</title>
 
-	<!-- Link Main CSS -->
-	<link rel="stylesheet" href="admin/assets/css/bootstrap.css">
+  <!-- Link Main CSS -->
+  <link rel="stylesheet" href="admin/assets/css/bootstrap.css">
 </head>
 <body>
-	<nav class="navbar navbar-default">
+  <nav class="navbar navbar-default">
     <div class="container">
       <ul class="nav navbar-nav">
         <li><a  href="index.php">Home</a></li>
@@ -93,8 +93,9 @@ if (empty($_SESSION["keranjang"]) OR !isset($_SESSION["keranjang"]))
              <input type="text" readonly value="<?php echo $_SESSION["pelanggan"]['nama_pelanggan'] ?>" class="form-control">
            </div>
          </div>
-         <div class="col-md-4"> <div class="form-group">
-           <input type="text" readonly value="<?php echo $_SESSION["pelanggan"]['telepon_pelanggan'] ?>" class="form-control">
+         <div class="col-md-4"> 
+          <div class="form-group">
+           <input type="text" readonly value="<?php echo $_SESSION["pelanggan"]['telepone_pelanggan'] ?>" class="form-control">
          </div>
        </div>
        <div class="col-md-4">

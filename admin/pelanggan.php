@@ -1,6 +1,9 @@
-<h2>Data Pelanggan</h2>
-
- <table class="table table-bordered">
+<?php 
+//session_start();
+//koneksi ke database
+$koneksi =new mysqli("localhost","root","","shoesstyle");
+ ?>
+<table class="table table-bordered">
 	<thead>
 		<tr>
 			<th>No</th>
@@ -18,7 +21,7 @@
 			<td><?php echo $nomor; ?></td>
 			<td><?php echo $pecah['nama_pelanggan']; ?></td>
 			<td><?php echo $pecah['email_pelanggan']; ?></td>
-			<td><?php echo $pecah['telepon_pelanggan']; ?></td>
+			<td><?php echo $pecah['telepone_pelanggan']; ?></td>
 			<td>
 				<a href="" class="btn-danger btn">hapus</a>
 			</td>
@@ -26,4 +29,4 @@
 		<?php $nomor++; ?>
 	<?php } ?>
 	</tbody>
-</table> 
+</table>

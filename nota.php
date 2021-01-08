@@ -62,7 +62,7 @@ include 'koneksi.php';
 						<h3>Pelanggan</h3>
 						<strong><?php echo $detail['nama_pelanggan']; ?></strong> <br>
 						<p>
-							<?php echo $detail['telepon_pelanggan']; ?><br>
+							<?php echo $detail['telepone_pelanggan']; ?><br>
 							<?php echo $detail['email_pelanggan']; ?>
 						</p>
 					</div>

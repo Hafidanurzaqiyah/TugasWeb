@@ -1,5 +1,7 @@
-<h2>Data Pembelian</h2>
-
+<?php 
+//koneksi ke database
+$koneksi =new mysqli("localhost","root","","shoesstyle");
+ ?>
 <table class="table table-bordered">
 	<thead>
 		<tr>
@@ -26,4 +28,4 @@
 		<?php $nomor++; ?>
 	<?php } ?>
 	</tbody>
-</table> 
+</table>

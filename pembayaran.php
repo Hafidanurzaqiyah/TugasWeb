@@ -72,7 +72,7 @@ if ($id_pelanggan_login!==$id_pelanggan_beli)
 
 				<div class="form-group">
 					<label>Foto Bukti</label>
-					<input type="file" name="bukti" class="form-control">
+					<input type="file" class="form-control" name="bukti">
 					<p class="text-danger">Foto bukti harus JPG maksimal 2MB</p>
 				</div>
 				<button class="btn btn-primary" name="kirim">Kirim</button>
@@ -81,7 +81,6 @@ if ($id_pelanggan_login!==$id_pelanggan_beli)
 		</div>
 
 		<?php 
-
 		if (isset($_POST["kirim"])) 
 		{
 			$namabukti=$_FILES["bukti"]["name"];
