@@ -2,6 +2,9 @@
 session_start();
 //koneksi ke database
 include 'koneksi.php'; 
+require 'vendor/autoload.php';
+use Carbon\Carbon;
+$sekarang = Carbon::now();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +37,7 @@ include 'koneksi.php';
     <?php while($perproduk=$ambil->fetch_assoc()){ ?>
       <div class="card mr-2 ml-3 mt-2" style="width: 16rem;">
         <div class="card-body bg-light">
-         <img src="foto_produk/<?php echo $perproduk['foto_produk']; ?>" class="card-img-top" alt="...">
+         <img src="foto_produk/<?php echo $perproduk['gambar_produk']; ?>" class="card-img-top" alt="...">
          <h3><?php echo $perproduk['nama_produk']; ?></h3>
          <i class="fas fa-star text-success"></i>
          <i class="fas fa-star text-success"></i>
@@ -85,6 +88,9 @@ include 'koneksi.php';
           <i class="fab fa-twitter" aria-hidden="true"></i>
           <i class="fab fa-instagram" aria-hidden="true"></i>
         </div>
+        <div class="col-lg-4 py-5 follow-us">
+                <h4>Time : <?php echo "$sekarang"; ?></h4> 
+            </div>
       </div>
       <div class="copyright">
         <p>&copy; Copyright <script>document.write(new Date().getFullYear());</script>, ShoesStyle</p>

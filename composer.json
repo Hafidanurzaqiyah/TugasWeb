@@ -1,5 +1,15 @@
 {
+    "name": "administrator/tugas-web",
+    "description": "Tugas Website",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Hafidanurzaqiyah",
+            "email": "hafidanz700@gmail.com"
+        }
+    ],
     "require": {
-        "fakerphp/faker": "^1.13"
+        "nesbot/carbon": "^2.43"
     }
 }

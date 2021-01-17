@@ -1,6 +1,5 @@
-<?php session_start();
-include 'koneksi.php' 
-?>
+<?php session_start(); ?>
+<?php include 'koneksi.php' ?>
 <?php  
 $id_produk = $_GET['id'];
 
@@ -26,7 +25,7 @@ echo "</pre";
         <li><a  href="index.php">Home</a></li>
         <li><a  href="produk.php">Produk</a></li>
         <li><a  href="contact.php">Contact</a></li>
-        <li><a  href="checkout.php">Checkout</a></li>
+        <li><a  href="chekout.php">Chekout</a></li>
         <?php if (isset($_SESSION["pelanggan"])): ?>
           <li><a  href="logout.php">Logout</a></li>
           <?php else: ?>
@@ -41,12 +40,13 @@ echo "</pre";
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<img src="foto_produk/<?php echo $detail["foto_produk"];?>" alt="" class="img-responsive">
+				<img src="foto_produk/<?php echo $detail["gambar_produk"];?>" alt="" class="img-responsive">
 			</div>
 			<div class="col-md-6">
 				<h2><?php echo $detail["nama_produk"]; ?></h2>
-				<h4>Rp. <?php echo number_format($detail["harga_produk"]); ?></h4> 
-				<h5>Stok: <?php echo $detail['stok_produk']; ?></h5>
+				<h4>Rp. <?php echo number_format($detail["harga_produk"]); ?></h4>
+
+				<h5>Stok : <?php echo $detail["stok_produk"]; ?></h5>
 
 				<form method="post">
 					<div class="form-group">

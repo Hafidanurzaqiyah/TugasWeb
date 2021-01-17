@@ -2,6 +2,9 @@
 session_start();
 //koneksi ke database
 include 'koneksi.php';
+require 'vendor/autoload.php';
+use Carbon\Carbon;
+$sekarang = Carbon::now();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -102,6 +105,9 @@ include 'koneksi.php';
                         <i class="fab fa-youtube" aria-hidden="true"></i>
                         <i class="fab fa-twitter" aria-hidden="true"></i>
                         <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-lg-4 py-5 follow-us">
+                        <h4>Time : <?php echo "$sekarang"; ?></h4> 
                     </div>
                 </div>
                 <div class="copyright">

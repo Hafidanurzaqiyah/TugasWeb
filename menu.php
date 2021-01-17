@@ -17,12 +17,12 @@
             <a class="nav-link text-white" href="contact.php" tabindex="-1" aria-disabled="true">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="checkout.php">Checkout</a>
+            <a class="nav-link text-white" href="chekout.php">Chekout</a>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <?php if (isset($_SESSION["pelanggan"])): ?>
-            <li class="nav-item"><a class="nav-link text-white" href="riwayat.php">Riwayat Belanja</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="riwayat.php">Riwayat</a></li>
              <li><a href="logout.php" class="btn"><img src="img/logout.png" width="30" data-toggel="tooltip" title="Logout"></a></li>
           <?php else: ?>
             <li><a href="login.php" class="btn"><img src="img/account.png" width="30" data-toggel="tooltip" title="Login"></a></li>

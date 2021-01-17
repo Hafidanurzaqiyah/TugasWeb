@@ -63,7 +63,7 @@ include 'koneksi.php';
 
         if (isset($_SESSION["keranjang"]) OR !empty($_SESSION["keranjang"])) 
         {
-          echo "<script>location='checkout.php';</script>";
+          echo "<script>location='chekout.php';</script>";
         }
         else
         {

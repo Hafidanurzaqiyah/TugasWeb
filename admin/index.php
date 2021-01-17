@@ -1,7 +1,7 @@
-<?php 
+﻿<?php 
 session_start();
-//koneksi database
-$koneksi = new mysqli("localhost","root","","shoesstyle");
+//koneksi ke database
+$koneksi =new mysqli("localhost","root","","shoesstyle");
 if (!isset($_SESSION['admin'])) 
 {
   echo "<script>alert('Anda harus login');</script>";
@@ -9,8 +9,7 @@ if (!isset($_SESSION['admin']))
   header('location:login.php');
   exit();
 }
-?>
-
+ ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -43,7 +42,7 @@ if (!isset($_SESSION['admin']))
   <div style="color: white;
 padding: 15px 50px 5px 50px;
 float: right;
-font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="login.html" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
         </nav>   
            <!-- /. NAV TOP  -->
                 <nav class="navbar-default navbar-side" role="navigation">
@@ -52,11 +51,30 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="login.html" class="
 				<li class="text-center">
                     <img src="assets/img/find_user.png" class="user-image img-responsive"/>
 					</li>
-                    <li><a href="index.php?halaman=home"><i class="fa fa-dashboard fa-3x"></i> home </a></li>
-                    <li><a href="index.php?halaman=produk"><i class="fa fa-dashboard fa-3x"></i> produk </a></li>
-                    <li><a href="index.php?halaman=pelanggan"><i class="fa fa-dashboard fa-3x"></i> pelanggan </a></li>
-                    <li><a href="index.php?halaman=pembelian"><i class="fa fa-dashboard fa-3x"></i> pembelian </a></li>
-                    <li><a href="index.php?halaman=logout"><i class="fa fa-dashboard fa-3x"></i> logout </a></li>
+				
+					
+                    <li>
+                        <a href="index.php"><i class="fa fa-dashboard "></i> Home</a>
+                    </li>
+                    <li>
+                        <a href="index.php?halaman=produk"><i class="fa fa-list"></i> Produk</a>
+                    </li>
+                    <li>
+                        <a href="index.php?halaman=kategori"><i class="fa fa-user "></i> Kategori</a>
+                    </li>
+                    <li>
+                        <a href="index.php?halaman=pembelian"><i class="fa fa-user "></i> Pembelian</a>
+                    </li>
+                     <li>
+                        <a href="index.php?halaman=laporan_pembelian"><i class="fa fa-book "></i> Laporan</a>
+                    </li>
+                                        <li>
+                        <a href="index.php?halaman=pelanggan"><i class="fa fa-shopping-cart "></i> Pelanggan</a>
+                    </li>
+                    <li>
+                        <a href="index.php?halaman=logout"><i class="fa fa-sign-out"></i> Logout</a>
+                    </li>
+                     
                 </ul>
                
             </div>
@@ -65,46 +83,58 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="login.html" class="
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
-                <?php
-                if (isset($_GET['halaman'])) {
-                    if ($_GET['halaman']=="produk") 
-                    {
-                      include 'produk.php';
-                    }
-                    elseif ($_GET['halaman']=="pelanggan")
-                    {
-                      include 'pelanggan.php';
-                    }
-                    elseif ($_GET['halaman']=="pembelian") 
-                    {
-                      include 'pembelian.php';
-                    }
-                    elseif ($_GET['halaman']=="detail") 
-                    {
-                      include 'detail.php';
-                    }
-                    elseif ($_GET['halaman']=="tambahproduk") 
-                    {
-                      include 'tambahproduk.php';
-                    }
-                    elseif ($_GET['halaman']=="hapusproduk") 
-                    {
-                      include 'hapusproduk.php';
-                    }
-                    elseif ($_GET['halaman']=="ubahproduk") 
-                    {
-                      include 'ubahproduk.php';
-                    }
-                    elseif ($_GET['halaman']=="logout") 
-                    {
-                      include 'logout.php';
-                    }
-                  }
-                  else
-                  {
-                    include 'home.php';
-                  }
-                ?>
+              <?php 
+              if (isset($_GET['halaman'])) {
+                if ($_GET['halaman']=="produk") 
+                {
+                  include 'produk.php';
+                }
+                elseif ($_GET['halaman']=="pelanggan")
+                {
+                  include 'pelanggan.php';
+                }
+                elseif ($_GET['halaman']=="pembelian") 
+                {
+                  include 'pembelian.php';
+                }
+                elseif ($_GET['halaman']=="detail") 
+                {
+                  include 'detail.php';
+                }
+                elseif ($_GET['halaman']=="tambahproduk") 
+                {
+                  include 'tambahproduk.php';
+                }
+                elseif ($_GET['halaman']=="hapusproduk") 
+                {
+                  include 'hapusproduk.php';
+                }
+                elseif ($_GET['halaman']=="ubahproduk")
+                {
+                  include 'ubahproduk.php';
+                }
+                elseif ($_GET['halaman']=="logout") 
+                {
+                  include 'logout.php';
+                }
+                elseif ($_GET['halaman']=="pembayaran") 
+                {
+                  include 'pembayaran.php';
+                }
+                elseif ($_GET['halaman']=="laporan_pembelian") 
+                {
+                  include 'laporan_pembelian.php';
+                }
+                elseif ($_GET['halaman']=="kategori") 
+                {
+                  include 'kategori.php';
+                }
+              }
+              else
+              {
+                include 'home.php';
+              }
+               ?>
             </div>
              <!-- /. PAGE INNER  -->
             </div>

@@ -38,9 +38,9 @@ if ($id_pelanggan_login!==$id_pelanggan_beli)
 				<li><a  href="index.php">Home</a></li>
 				<li><a  href="produk.php">Produk</a></li>
 				<li><a  href="contact.php">Contact</a></li>
-				<li><a  href="checkout.php">Checkout</a></li>
+				<li><a  href="chekout.php">Chekout</a></li>
 				<?php if (isset($_SESSION["pelanggan"])): ?>
-					<li><a href="riwayat.php">Riwayat Belanja</a></li>
+					<li><a href="riwayat.php">Riwayat</a></li>
 					<li><a  href="logout.php">Logout</a></li>
 					<?php else: ?>
 						<li><a href="login.php">Login</a></li>
@@ -72,7 +72,7 @@ if ($id_pelanggan_login!==$id_pelanggan_beli)
 
 				<div class="form-group">
 					<label>Foto Bukti</label>
-					<input type="file" class="form-control" name="bukti">
+					<input type="file" name="bukti" class="form-control">
 					<p class="text-danger">Foto bukti harus JPG maksimal 2MB</p>
 				</div>
 				<button class="btn btn-primary" name="kirim">Kirim</button>
@@ -81,6 +81,7 @@ if ($id_pelanggan_login!==$id_pelanggan_beli)
 		</div>
 
 		<?php 
+
 		if (isset($_POST["kirim"])) 
 		{
 			$namabukti=$_FILES["bukti"]["name"];

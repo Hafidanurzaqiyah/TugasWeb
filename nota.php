@@ -17,9 +17,9 @@ include 'koneksi.php';
 				<li><a  href="index.php">Home</a></li>
 				<li><a  href="produk.php">Produk</a></li>
 				<li><a  href="contact.php">Contact</a></li>
-				<li><a  href="checkout.php">Checkout</a></li>
+				<li><a  href="chekout.php">Chekout</a></li>
 				<?php if (isset($_SESSION["pelanggan"])): ?>
-					<li><a href="riwayat.php">Riwayat Belanja</a></li>
+					<li><a href="riwayat.php">Riwayat</a></li>
 					<li><a  href="logout.php">Logout</a></li>
 					<?php else: ?>
 						<li><a href="login.php">Login</a></li>
@@ -62,7 +62,7 @@ include 'koneksi.php';
 						<h3>Pelanggan</h3>
 						<strong><?php echo $detail['nama_pelanggan']; ?></strong> <br>
 						<p>
-							<?php echo $detail['telepone_pelanggan']; ?><br>
+							<?php echo $detail['telepon_pelanggan']; ?><br>
 							<?php echo $detail['email_pelanggan']; ?>
 						</p>
 					</div>
@@ -82,8 +82,8 @@ include 'koneksi.php';
 							<th>Harga</th>
 							<th>Berat</th>
 							<th>Jumlah</th>
-							<th>Sub Berat</th>
-							<th>Sub Total</th>
+							<th>Subberat</th>
+							<th>Subtotal</th>
 						</tr>
 					</thead>
 					<tbody>

@@ -21,7 +21,7 @@ if (!isset($_SESSION["pelanggan"]) OR empty($_SESSION["pelanggan"]))
 				<li><a  href="index.php">Home</a></li>
 				<li><a  href="produk.php">Produk</a></li>
 				<li><a  href="contact.php">Contact</a></li>
-				<li><a  href="checkout.php">Checkout</a></li>
+				<li><a  href="chekout.php">Chekout</a></li>
 				<?php if (isset($_SESSION["pelanggan"])): ?>
 					<li><a  href="logout.php">Logout</a></li>
 					<?php else: ?>
@@ -68,6 +68,8 @@ if (!isset($_SESSION["pelanggan"]) OR empty($_SESSION["pelanggan"]))
 								<a href="nota.php?id=<?php echo $pecah["id_pembelian"]; ?>" class="btn btn-info">Nota</a>
 								<?php if ($pecah['status_pembelian']=='pending'): ?>
 									<a href="pembayaran.php?id=<?php echo $pecah["id_pembelian"]; ?>" class="btn btn-success">Input Pembayaran</a>
+									<?php else: ?>
+										<a href="lihat_pembayaran.php?id=<?php echo $pecah['id_pembelian'];?>" class="btn btn-warning">Lihat Pembayaran</a>
 								<?php endif ?>
 
 							</td>

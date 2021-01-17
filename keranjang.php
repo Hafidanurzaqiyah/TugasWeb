@@ -29,9 +29,11 @@ if (empty($_SESSION["keranjang"]) OR !isset($_SESSION["keranjang"]))
 				<li><a  href="contact.php">Contact</a></li>
 				<li><a  href="chekout.php">Chekout</a></li>
 				<?php if (isset($_SESSION["pelanggan"])): ?>
+					<li><a href="riwayat.php">Riwayat</a></li>
 					<li><a  href="logout.php">Logout</a></li>
 					<?php else: ?>
 						<li><a href="login.php">Login</a></li>
+						<li><a href="register.php">Registrasi</a></li>
 					<?php endif ?> 
 					<li><a href="keranjang.php">Keranjang</a></li>
 				</ul>
@@ -77,7 +79,7 @@ if (empty($_SESSION["keranjang"]) OR !isset($_SESSION["keranjang"]))
 					</tbody>
 				</table>
 				<a href="produk.php" class="btn btn-default">Lanjut Belanja</a>
-				<a href="checkout.php" class="btn btn-primary">Chekout</a>
+				<a href="chekout.php" class="btn btn-primary">Chekout</a>
 			</div>
 		</section>
 

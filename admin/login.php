@@ -1,8 +1,9 @@
-<?php
+<?php 
+session_start();
 $koneksi = new mysqli("localhost","root","","shoesstyle");
-?>
-
-<!DOCTYPE html>
+ 
+?>  
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -23,7 +24,7 @@ $koneksi = new mysqli("localhost","root","","shoesstyle");
         <div class="row text-center ">
             <div class="col-md-12">
                 <br /><br />
-                <h2> shoesStyle : Login</h2>
+                <h2> Shooesstyle : Login</h2>
                
                 <h5>( Login yourself to get access )</h5>
                  <br />
@@ -43,7 +44,7 @@ $koneksi = new mysqli("localhost","root","","shoesstyle");
                                             <span class="input-group-addon"><i class="fa fa-tag"  ></i></span>
                                             <input type="text" class="form-control" name="user" />
                                         </div>
-                                    <div class="form-group input-group">
+                                        <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-lock"  ></i></span>
                                             <input type="password" class="form-control"  name="pass" />
                                         </div>
@@ -52,19 +53,19 @@ $koneksi = new mysqli("localhost","root","","shoesstyle");
                                                 <input type="checkbox" /> Remember me
                                             </label>
                                             <span class="pull-right">
-                                                <a href="#" >Forget password ? </a> 
+                                                   <a href="#" >Forget password ? </a> 
                                             </span>
-                                    </div>
+                                        </div>
                                      
-                                     <button class="btn btn-primary" name="login">login </button>
+                                     <button class="btn btn-primary" name="login">Login</button>
                                     <hr />
                                     Not register ? <a href="registeration.html" >click here </a> 
                                     </form>
-                                    <?php  
+
+                                    <?php 
                                     if (isset($_POST['login'])) 
                                     {
-                                    	$ambil= $koneksi->query("SELECT * FROM admin WHERE username='$_POST[user]' 
-                                        AND password='$_POST[pass]'");
+                                    	$ambil= $koneksi->query("SELECT * FROM admin WHERE username='$_POST[user]' AND password='$_POST[pass]'");
                                     	$yangcocok = $ambil->num_rows;
                                     	if ($yangcocok==1) 
                                     	{
