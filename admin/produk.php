@@ -25,11 +25,12 @@
 			<td><?php echo $pecah['berat_produk']; ?></td>
 			<td><?php echo $pecah['stok_produk']; ?></td>
 			<td>
-				<img src="../foto_produk/<?php echo $pecah['gambar_produk']; ?>" width="100">
+				<img src="../foto_produk/<?php echo $pecah['foto_produk']; ?>" width="100">
 			</td>
 			<td>
-				<a href="index.php?halaman=hapusproduk&id=<?php echo $pecah['id_produk']; ?>" class="btn-danger btn">hapus</a>
-				<a href="index.php?halaman=ubahproduk&id=<?php echo $pecah['id_produk']; ?>" class="btn-warning btn">ubah</a>
+				<a href="index.php?halaman=hapusproduk&id=<?php echo $pecah['id_produk']; ?>" class="btn btn-danger" onclick="return confirm ('Yakin ingin menghapus?')"><i class="glyphicon glyphicon-trash"></i> hapus</a>
+				<a href="index.php?halaman=ubahproduk&id=<?php echo $pecah['id_produk']; ?>" class="btn btn-warning"><i class="glyphicon glyphicon-edit"></i>ubah</a>
+				<a href="index.php?halaman=detailproduk&id=<?php echo $pecah['id_produk']; ?>" class="btn btn-info"><i class="glyphicon glyphicon-eye"></i>Detail</a>
 			</td>
 		</tr>
 		<?php $nomor++; ?>

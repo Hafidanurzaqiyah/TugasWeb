@@ -47,7 +47,7 @@ echo "</pre>";
 		<input type="number" name="berat" class="form-control" value="<?php echo $pecah['berat_produk']; ?>">
 	</div>
 	<div class="form-group">
-		<img src="../foto_produk/<?php echo $pecah['gambar_produk'] ?>" width = "200">
+		<img src="../foto_produk/<?php echo $pecah['foto_produk'] ?>" width = "200">
 	</div>
 	<div class="form-group">
 		<label>Ganti Foto</label>
@@ -74,7 +74,7 @@ if (isset($_POST['ubah']))
 	if (!empty($lokasifoto)) 
 	{
 		move_uploaded_file($lokasifoto, "../foto_produk/$namafoto");
-		$koneksi->query("UPDATE produk SET nama_produk='$_POST[nama]',harga_produk='$_POST[harga]',berat_produk='$_POST[berat]',gambar_produk='$namafoto',deskripsi_produk='$_POST[deskripsi]',stok_produk='$_POST[stok]', id_kategori=$_POST[id_kategori] WHERE id_produk='$_GET[id]'");
+		$koneksi->query("UPDATE produk SET nama_produk='$_POST[nama]',harga_produk='$_POST[harga]',berat_produk='$_POST[berat]',foto_produk='$namafoto',deskripsi_produk='$_POST[deskripsi]',stok_produk='$_POST[stok]', id_kategori=$_POST[id_kategori] WHERE id_produk='$_GET[id]'");
 	}
 	else
 	{

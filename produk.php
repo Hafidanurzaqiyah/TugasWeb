@@ -31,13 +31,13 @@ $sekarang = Carbon::now();
 </head>
 <body>
   <?php include 'menu.php'; ?>
-
+<br>
   <div class="row ml-5 mt-5 mr-2 ">
     <?php $ambil = $koneksi->query("SELECT * FROM produk"); ?>
     <?php while($perproduk=$ambil->fetch_assoc()){ ?>
       <div class="card mr-2 ml-3 mt-2" style="width: 16rem;">
         <div class="card-body bg-light">
-         <img src="foto_produk/<?php echo $perproduk['gambar_produk']; ?>" class="card-img-top" alt="...">
+         <img src="foto_produk/<?php echo $perproduk['foto_produk']; ?>" class="card-img-top" alt="...">
          <h3><?php echo $perproduk['nama_produk']; ?></h3>
          <i class="fas fa-star text-success"></i>
          <i class="fas fa-star text-success"></i>
@@ -45,13 +45,14 @@ $sekarang = Carbon::now();
          <i class="fas fa-star-half-alt text-success"></i>
          <i class="far fa-star text-success"></i><br>
          <h5>Rp.<?php echo number_format($perproduk['harga_produk']); ?></h5>
-         <a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="btn btn-primary">Beli</a>
+         <a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="btn btn-primary"><i class="fa fa-cart-plus" aria-hidden="true"></i> Beli</a>
          <a href="detail.php?id=<?php echo $perproduk['id_produk']; ?>" class="btn btn-danger">Detail</a>
        </div>
      </div>
    <?php } ?> 
  </div>
 </div>
+<br>
 <!-- Footer -->
 <div class="footer">
   <div class="container ">

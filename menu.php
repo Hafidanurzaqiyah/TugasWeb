@@ -1,4 +1,12 @@
-     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ShoesStyle</title>
+  <!-- Link Main CSS -->
+  <link rel="stylesheet" href="admin/assets/bootstrap.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container ">
       <a class="navbar-brand text-white font-weight-bold" href="#">ShoesStyle</a>
       <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,3 +42,4 @@
      </div>
    </div>
  </nav>
+</header>
