@@ -55,13 +55,12 @@ echo "</pre>";
 	</div>
 	<div class="form-group">
 		<label>Deskripsi</label>
-		<textarea name="deskripsi" class="form-control" rows="10">
-			<?php echo $pecah['deskripsi_produk']; ?>
+		<textarea name="deskripsi" class="form-control" rows="10"><?php echo $pecah['deskripsi_produk']; ?>
 		</textarea>
 	</div>
 	<div class="form-group">
 		<label>Stok</label>
-		<input type="number" class="form-control" name="stok">
+		<input type="number" class="form-control" name="stok" value="<?php echo $pecah['stok_produk']; ?>">
 	</div>
 	<button class="btn btn-primary" name="ubah">Ubah</button>
 </form>
