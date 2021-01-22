@@ -3,9 +3,9 @@
 $ambil=$koneksi->query ("SELECT * FROM produk WHERE id_produk='$_GET[id]'");
 $pecah= $ambil->fetch_assoc();
 
-echo "<pre>";
-print_r($pecah);
-echo "</pre>";
+// echo "<pre>";
+// print_r($pecah);
+// echo "</pre>";
 ?>
 
 <?php  
@@ -17,9 +17,9 @@ while($tiap=$ambil->fetch_assoc())
 	$datakategori[]=$tiap;
 }
 
-echo "<pre>";
-print_r($datakategori);
-echo "</pre>";
+// echo "<pre>";
+// print_r($datakategori);
+// echo "</pre>";
 ?>
 
 <form method="post" enctype="multipart/form-data">
@@ -53,7 +53,7 @@ echo "</pre>";
 		<label>Ganti Foto</label>
 		<input type="file" name="foto" class="form-control">
 	</div>
-	<div class="form-group">
+	<!-- <div class="form-group">
 		<label>Deskripsi</label>
 		<textarea name="deskripsi" class="form-control" rows="10">
 			<?php echo $pecah['deskripsi_produk']; ?>
@@ -62,6 +62,15 @@ echo "</pre>";
 	<div class="form-group">
 		<label>Stok</label>
 		<input type="number" class="form-control" name="stok">
+	</div> -->
+	<div class="form-group">
+		<label>Deskripsi</label>
+		<textarea name="deskripsi" class="form-control" rows="10"><?php echo $pecah['deskripsi_produk']; ?>
+		</textarea>
+	</div>
+	<div class="form-group">
+		<label>Stok</label>
+		<input type="number" class="form-control" name="stok" value="<?php echo ($pecah['stok_produk']); ?>">
 	</div>
 	<button class="btn btn-primary" name="ubah">Ubah</button>
 </form>

@@ -10,6 +10,7 @@
         }
     ],
     "require": {
-        "nesbot/carbon": "^2.43"
+        "nesbot/carbon": "^2.43",
+        "mpdf/mpdf": "^8.0"
     }
 }

@@ -118,7 +118,7 @@ if (empty($_SESSION["keranjang"]) OR !isset($_SESSION["keranjang"]))
  </div>
  <button class="btn btn-primary" name="chekout">Chekout</button>
 </form>
-
+<br>
 <?php  
 if (isset($_POST["chekout"])) 
 {
