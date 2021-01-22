@@ -55,12 +55,12 @@ while($tiap=$ambil->fetch_assoc())
 	</div>
 	<!-- <div class="form-group">
 		<label>Deskripsi</label>
-		<textarea name="deskripsi" class="form-control" rows="10">
-			<?php echo $pecah['deskripsi_produk']; ?>
+		<textarea name="deskripsi" class="form-control" rows="10"><?php echo $pecah['deskripsi_produk']; ?>
 		</textarea>
 	</div>
 	<div class="form-group">
 		<label>Stok</label>
+<<<<<<< HEAD
 		<input type="number" class="form-control" name="stok">
 	</div> -->
 	<div class="form-group">
@@ -71,6 +71,9 @@ while($tiap=$ambil->fetch_assoc())
 	<div class="form-group">
 		<label>Stok</label>
 		<input type="number" class="form-control" name="stok" value="<?php echo ($pecah['stok_produk']); ?>">
+=======
+		<input type="number" class="form-control" name="stok" value="<?php echo $pecah['stok_produk']; ?>">
+>>>>>>> e5f2ac0b2278659d5b7d3df8964a7a0e5453cfab
 	</div>
 	<button class="btn btn-primary" name="ubah">Ubah</button>
 </form>
