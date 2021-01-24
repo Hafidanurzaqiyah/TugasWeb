@@ -7,7 +7,7 @@
 			<th>Nama Pelanggan</th>
 			<th>Email</th>
 			<th>Telepone</th>
-			<th>Aksi</th>
+<!-- 			<th>Aksi</th> -->
 		</tr>
 	</thead>
 	<tbody>
@@ -19,9 +19,9 @@
 			<td><?php echo $pecah['nama_pelanggan']; ?></td>
 			<td><?php echo $pecah['email_pelanggan']; ?></td>
 			<td><?php echo $pecah['telepon_pelanggan']; ?></td>
-			<td>
+<!-- 			<td>
 				<a href="" class="btn-danger btn">hapus</a>
-			</td>
+			</td> -->
 		</tr>
 		<?php $nomor++; ?>
 	<?php } ?>
