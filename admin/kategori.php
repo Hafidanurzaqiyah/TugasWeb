@@ -19,7 +19,7 @@ while($tiap=$ambil->fetch_assoc())
 		<tr>
 			<th>No</th>
 			<td>Kategori</td>
-			<td>Aksi</td>
+<!-- 			<td>Aksi</td> -->
 		</tr>
 	</thead>
 	<tbody>
@@ -28,10 +28,10 @@ while($tiap=$ambil->fetch_assoc())
 		<tr>
 			<td><?php echo $key+1 ?></td>
 			<td><?php echo $value["nama_kategori"] ?></td>
-			<td>
+<!-- 			<td>
 				<a href="" class="btn btn-danger btn-sm" ><i class="glyphicon glyphicon-trash"></i>Hapus</a>
 				<a href="" class="btn btn-warning btn-sm"><i class="glyphicon glyphicon-edit"></i>Ubah</a>
-			</td>
+			</td> -->
 		</tr>
 		<?php endforeach ?>
 	</tbody>
